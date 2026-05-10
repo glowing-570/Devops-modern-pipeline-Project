@@ -1,5 +1,4 @@
-cat > ~/Devops-modern-pipeline-Project/README.md << 'ENDOFFILE'
-# 🚀 Modern End-to-End DevOps Deployment Pipeline
+# 🚀  DevOps Deployment Pipeline
 
 A complete DevOps pipeline deploying two applications using industry-standard tools — from infrastructure provisioning to CI/CD automation and container orchestration.
 
@@ -189,4 +188,4 @@ Push to main
 
 **Glowing Star**
 Cloud & DevOps Engineer
-ENDOFFILE
+
