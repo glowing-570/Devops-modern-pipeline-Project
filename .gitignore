@@ -10,3 +10,5 @@ __pycache__/
 
 # OS files
 .DS_Store
+apache-tomcat-8.5.40.tar.gz
+*.tar.gz
