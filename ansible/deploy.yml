@@ -1,0 +1,37 @@
+---
+- name: Deploy applications with Docker Compose
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Create app directory on server
+      file:
+        path: /home/ubuntu/app
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+
+    - name: Copy docker-compose.yml to server
+      copy:
+        src: ../docker-compose.yml
+        dest: /home/ubuntu/app/docker-compose.yml
+        owner: ubuntu
+        group: ubuntu
+
+    - name: Copy portfolio app to server
+      synchronize:
+        src: ../portfolio-app/
+        dest: /home/ubuntu/app/portfolio-app/
+
+    - name: Copy java app to server
+      synchronize:
+        src: ../java-app/
+        dest: /home/ubuntu/app/java-app/
+        rsync_opts:
+          - "--exclude=target/"
+          - "--exclude=.git/"
+
+    - name: Run Docker Compose
+      shell: docker compose up -d --build
+      args:
+        chdir: /home/ubuntu/app
