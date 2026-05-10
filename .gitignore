@@ -1,0 +1,12 @@
+# Tomcat 
+tomcat/
+
+# Java build files
+java-app/target/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
