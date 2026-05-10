@@ -12,3 +12,10 @@ __pycache__/
 .DS_Store
 apache-tomcat-8.5.40.tar.gz
 *.tar.gz
+# Terraform
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+*.tfstate
+*.tfstate.backup
+.terraform/
